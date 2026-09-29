@@ -1,0 +1,100 @@
+/* Lune support site. System fonts only: no web fonts, no external requests. */
+:root {
+  --surface: #fbf7fb;
+  --raised: #ffffff;
+  --text: #2d2230;
+  --text-secondary: #5f5263;
+  --accent: #8e3a9d;
+  --border: #eadfeb;
+  --notice: #fff6e0;
+  --notice-border: #e9c46a;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface: #17121a;
+    --raised: #221b26;
+    --text: #f3ecf5;
+    --text-secondary: #bfb2c4;
+    --accent: #d596e2;
+    --border: #3a2f3f;
+    --notice: #3a3020;
+    --notice-border: #a8883a;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--surface);
+  color: var(--text);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "PingFang SC",
+    "Hiragino Sans", "Noto Sans CJK TC", "Noto Sans CJK SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+a { color: var(--accent); }
+
+.site-header, main, .site-footer {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 20px;
+  padding-top: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.site-header nav { display: flex; flex-wrap: wrap; gap: 4px 14px; }
+.site-header nav a { text-decoration: none; }
+.site-header nav a[aria-current] { font-weight: 600; text-decoration: underline; }
+.languages { margin-left: auto; font-size: 0.9rem; }
+
+main { padding-top: 8px; padding-bottom: 32px; }
+h1 { font-size: 1.9rem; line-height: 1.25; margin: 24px 0 8px; }
+h2 { font-size: 1.25rem; margin: 28px 0 8px; }
+.updated, .lead { color: var(--text-secondary); }
+
+.card {
+  background: var(--raised);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 4px 18px;
+  margin: 16px 0;
+}
+
+.draft-notice, .no-health-details, .form-pending {
+  background: var(--notice);
+  border: 1px solid var(--notice-border);
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin: 16px 0;
+}
+
+details { margin: 10px 0; }
+summary { cursor: pointer; font-weight: 600; }
+
+#feedback-form iframe { display: block; width: 100%; border: 0; min-height: 520px; }
+
+.site-footer {
+  padding-top: 16px;
+  padding-bottom: 40px;
+  border-top: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
