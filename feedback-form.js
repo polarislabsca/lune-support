@@ -2,7 +2,7 @@
 // THIS IS THE ONLY PLACE ITS ID LIVES. Set it to the ID at the end of the form's share link
 // (https://tally.so/r/<ID>), for example "wAbCdE". While it's empty, each page shows its
 // "not available yet" note instead of the form. See README.md, "Feedback form".
-var LUNE_TALLY_FORM_ID = "";
+var LUNE_TALLY_FORM_ID = "vGQ89l";
 
 (function () {
   var holder = document.getElementById("feedback-form");

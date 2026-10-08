@@ -27,7 +27,7 @@ Don't rename or move them.
 The Tally form ID lives in exactly one place: `LUNE_TALLY_FORM_ID` at the top of `feedback-form.js`. Until
 it's set, every feedback page shows a "not available yet" note with the email address.
 
-1. In Tally, create one form: "Topic" (Problem / Idea / Something else), "Message" (long text; its help text:
+1. In Tally, create one form: a star rating, "Message" (long text; its help text:
    "Please don't include health details."), "Email (optional, only if you'd like a reply)", and a
    **hidden field** named `language` (the pages fill in `en`, `zh-Hant` or `zh-Hans`). Labels can be in
    English and Chinese, for example "Message / 訊息 / 消息". Turn off Tally's own analytics and any
